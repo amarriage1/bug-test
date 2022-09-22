@@ -1,0 +1,580 @@
+{
+  "type": "PostgreSQL",
+  "managed": true,
+  "checklists": {
+    "checklists": []
+  },
+  "checks": [],
+  "customMeta": {
+    "kv": {}
+  },
+  "flowOptions": {
+    "virtualizable": false,
+    "rebuildBehavior": "NORMAL",
+    "crossProjectBuildBehavior": "DEFAULT"
+  },
+  "readWriteOptions": {
+    "preserveOrder": false,
+    "writeBuckets": 1,
+    "forceSingleOutputFile": false,
+    "defaultReadOrdering": {
+      "enabled": false,
+      "rules": []
+    }
+  },
+  "partitioning": {
+    "ignoreNonMatchingFile": false,
+    "considerMissingRequestedPartitionsAsEmpty": false,
+    "dimensions": []
+  },
+  "versionTag": {
+    "versionNumber": 1,
+    "lastModifiedBy": {
+      "login": "andrew"
+    },
+    "lastModifiedOn": 1663860971860
+  },
+  "creationTag": {
+    "versionNumber": 0,
+    "lastModifiedBy": {
+      "login": "andrew"
+    },
+    "lastModifiedOn": 1663860971856
+  },
+  "tags": [],
+  "params": {
+    "writeWithCopyBadDataBehavior": "NOVERIFY_ERROR",
+    "connection": "NewPG",
+    "notReadyIfEmpty": false,
+    "mode": "table",
+    "partitioningType": "custom",
+    "normalizeDoubles": true,
+    "table": "${projectKey}_run_copy_copy",
+    "tableCreationMode": "auto",
+    "writeInsertBatchSize": 10000,
+    "writeJDBCBadDataBehavior": "DISCARD_ROW",
+    "readColsWithUnknownTzAsDates": false,
+    "readSQLDateColsAsDSSDates": true
+  },
+  "schema": {
+    "columns": [
+      {
+        "name": "start",
+        "type": "string"
+      },
+      {
+        "name": "trigger.projectKey",
+        "type": "string"
+      },
+      {
+        "name": "trigger.scenarioId",
+        "type": "string"
+      },
+      {
+        "name": "trigger.trigger.id",
+        "type": "string"
+      },
+      {
+        "name": "trigger.trigger.type",
+        "type": "string"
+      },
+      {
+        "name": "trigger.trigger.name",
+        "type": "string"
+      },
+      {
+        "name": "trigger.trigger.delay",
+        "type": "string"
+      },
+      {
+        "name": "trigger.trigger.active",
+        "type": "string"
+      },
+      {
+        "name": "trigger.runId",
+        "type": "string"
+      },
+      {
+        "name": "trigger.timestamp",
+        "type": "string"
+      },
+      {
+        "name": "trigger.cancelled",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.admin",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayManageUDM",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayCreateProjects",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayCreateProjectsFromMacros",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayCreateProjectsFromTemplates",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayCreateProjectsFromDataikuApps",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayWriteUnsafeCode",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayWriteSafeCode",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayCreateAuthenticatedConnections",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayCreateCodeEnvs",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayCreateClusters",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayCreateCodeStudioTemplates",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayDevelopPlugins",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayEditLibFolders",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayManageCodeEnvs",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayManageClusters",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayManageCodeStudioTemplates",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayViewIndexedHiveConnections",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayCreatePublishedAPIServices",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayCreatePublishedProjects",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayWriteInRootProjectFolder",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayCreateActiveWebContent",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayCreateWorkspaces",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayShareToWorkspaces",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroupLevelPermissions.mayManageFeatureStore",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.via",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.authSource",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.realUserLogin",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.realUserEmail",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userGroups",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userAccessToken",
+        "type": "string"
+      },
+      {
+        "name": "trigger.triggerAuthCtx.userProfile",
+        "type": "string"
+      },
+      {
+        "name": "end",
+        "type": "string"
+      },
+      {
+        "name": "result.type",
+        "type": "string"
+      },
+      {
+        "name": "result.login",
+        "type": "string"
+      },
+      {
+        "name": "result.target.type",
+        "type": "string"
+      },
+      {
+        "name": "result.target.projectKey",
+        "type": "string"
+      },
+      {
+        "name": "result.target.scenarioId",
+        "type": "string"
+      },
+      {
+        "name": "result.start",
+        "type": "string"
+      },
+      {
+        "name": "result.end",
+        "type": "string"
+      },
+      {
+        "name": "result.outcome",
+        "type": "string"
+      },
+      {
+        "name": "result.info.automationLocal",
+        "type": "string"
+      },
+      {
+        "name": "result.info.name",
+        "type": "string"
+      },
+      {
+        "name": "result.info.active",
+        "type": "string"
+      },
+      {
+        "name": "result.info.login",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.admin",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayManageUDM",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayCreateProjects",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayCreateProjectsFromMacros",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayCreateProjectsFromTemplates",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayCreateProjectsFromDataikuApps",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayWriteUnsafeCode",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayWriteSafeCode",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayCreateAuthenticatedConnections",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayCreateCodeEnvs",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayCreateClusters",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayCreateCodeStudioTemplates",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayDevelopPlugins",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayEditLibFolders",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayManageCodeEnvs",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayManageClusters",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayManageCodeStudioTemplates",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayViewIndexedHiveConnections",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayCreatePublishedAPIServices",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayCreatePublishedProjects",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayWriteInRootProjectFolder",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayCreateActiveWebContent",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayCreateWorkspaces",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayShareToWorkspaces",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.mayManageFeatureStore",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroupLevelPermissions.canObtainAPITicketFromCookiesForGroupsRegex",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.via",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.authSource",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.realUserLogin",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userGroups",
+        "type": "string"
+      },
+      {
+        "name": "runAsUser.userProfile",
+        "type": "string"
+      },
+      {
+        "name": "clustersUsed",
+        "type": "string"
+      },
+      {
+        "name": "reportersStates",
+        "type": "string"
+      },
+      {
+        "name": "scenario.type",
+        "type": "string"
+      },
+      {
+        "name": "scenario.name",
+        "type": "string"
+      },
+      {
+        "name": "scenario.active",
+        "type": "string"
+      },
+      {
+        "name": "scenario.runAsUser",
+        "type": "string"
+      },
+      {
+        "name": "scenario.creationTag.versionNumber",
+        "type": "string"
+      },
+      {
+        "name": "scenario.creationTag.lastModifiedBy.login",
+        "type": "string"
+      },
+      {
+        "name": "scenario.creationTag.lastModifiedOn",
+        "type": "string"
+      },
+      {
+        "name": "scenario.versionTag.versionNumber",
+        "type": "string"
+      },
+      {
+        "name": "scenario.versionTag.lastModifiedBy.login",
+        "type": "string"
+      },
+      {
+        "name": "scenario.versionTag.lastModifiedOn",
+        "type": "string"
+      },
+      {
+        "name": "scenario.checklists.checklists",
+        "type": "string"
+      },
+      {
+        "name": "scenario.delayedTriggersBehavior.delayWhileRunning",
+        "type": "string"
+      },
+      {
+        "name": "scenario.delayedTriggersBehavior.squashDelayedTriggers",
+        "type": "string"
+      },
+      {
+        "name": "scenario.delayedTriggersBehavior.suppressTriggersWhileRunning",
+        "type": "string"
+      },
+      {
+        "name": "scenario.tags",
+        "type": "string"
+      },
+      {
+        "name": "scenario.triggers",
+        "type": "string"
+      },
+      {
+        "name": "scenario.reporters",
+        "type": "string"
+      },
+      {
+        "name": "scenario.params.steps",
+        "type": "string"
+      },
+      {
+        "name": "scenario.automationLocal",
+        "type": "string"
+      },
+      {
+        "name": "runId",
+        "type": "string"
+      }
+    ],
+    "userModified": true
+  },
+  "dkuProperties": [],
+  "metrics": {
+    "probes": [
+      {
+        "type": "basic",
+        "enabled": true,
+        "computeOnBuildMode": "PARTITION",
+        "meta": {
+          "name": "Basic data",
+          "level": 0
+        },
+        "configuration": {}
+      },
+      {
+        "type": "records",
+        "enabled": true,
+        "computeOnBuildMode": "NO",
+        "meta": {
+          "name": "Record count",
+          "level": 0
+        },
+        "configuration": {}
+      }
+    ],
+    "engineConfig": {
+      "padRunsWithMetrics": false,
+      "hive": {
+        "active": true,
+        "extraConf": []
+      },
+      "basic": {},
+      "dss": {
+        "active": true,
+        "selection": {
+          "useMemTable": false,
+          "filter": {
+            "distinct": false,
+            "enabled": false
+          },
+          "partitionSelectionMethod": "ALL",
+          "latestPartitionsN": 1,
+          "ordering": {
+            "enabled": false,
+            "rules": []
+          },
+          "samplingMethod": "FULL",
+          "maxRecords": -1,
+          "targetRatio": 0.02,
+          "withinFirstN": -1,
+          "maxReadUncompressedBytes": -1
+        }
+      },
+      "sql": {
+        "active": true
+      },
+      "impala": {
+        "active": true
+      },
+      "spark": {
+        "active": true,
+        "extraConf": []
+      },
+      "python": {}
+    },
+    "displayedState": {
+      "columns": [],
+      "metrics": [
+        "basic:COUNT_COLUMNS",
+        "records:COUNT_RECORDS"
+      ]
+    }
+  },
+  "metricsChecks": {
+    "runOnBuild": false,
+    "checks": [],
+    "displayedState": {
+      "checks": []
+    }
+  },
+  "customFields": {}
+}
